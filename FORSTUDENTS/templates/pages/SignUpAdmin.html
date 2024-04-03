@@ -1,0 +1,45 @@
+
+{% extends "masterpage.html" %} 
+
+<!DOCTYPE html>
+<html>
+
+{% block connect %}
+{% load static %}
+ <link rel="stylesheet" type="text/css" href="{% static 'css/SignUP.css' %}"> 
+</br>
+</br>
+</br>
+</br>
+<body>
+	<form action="" method="POST" class="box" >
+		{% csrf_token %}
+		<h1>SignUp</h1>
+		<p>USER NAME </p>
+		{{form.Username}}
+        <p>EMAIL</p>
+		{{form.Email}}
+		<p>PASSWORD</p>
+		{{form.Password}}
+		<p>RE_PASSWORD</p>
+		{{form.Re_Password}}
+		
+
+
+
+		<input type="submit" name="SignUp"   value="SignUp">  
+	</form>
+</body>
+
+	
+
+</html>
+
+
+
+
+
+
+
+
+{% endblock connect %}

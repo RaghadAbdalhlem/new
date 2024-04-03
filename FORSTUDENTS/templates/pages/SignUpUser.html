@@ -1,0 +1,65 @@
+
+
+
+{% extends "masterpage.html" %} 
+
+<!DOCTYPE html>
+<html>
+
+{% block connect %}
+{% load static %}
+ <link rel="stylesheet" type="text/css" href="{% static 'css/SignUP.css' %}"> 
+</br>
+</br>
+</br>
+</br>
+<body>
+	
+	<form action="" method="POST" class="box" >
+        {% csrf_token %}
+       <P style="color: white" >FIRST NAME </P> {{ form.first_name }}
+       <P style="color: white">LAST NAME </P> {{ form.last_name }}
+       <P style="color: white">EMAIL  </P> {{ form.email}}
+       <P style="color: white"> USER NAME  </P> {{ form.username }}
+       <P style="color: white">PASSWORD  </P>{{ form.password1 }}
+       <P style="color: white">RE_PASSWORD  </P> {{ form.password2 }}
+        <input type="submit" name="SignUp"   value="SignUp">  
+    </form>
+    {{ form.errors }}
+    Already have an account? <a href="{% url 'Loginstudent' %}" class="ml-2">Login</a>
+</br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>
+
+
+
+</div>
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder='firstname...';
+    form_fields[2].placeholder='lastname...';
+    form_fields[3].placeholder='email...';
+    form_fields[4].placeholder='Username...';
+    form_fields[5].placeholder='password...';
+    form_fields[6].placeholder='Re-enter password...';
+    for (var field in form_fields){
+        form_fields[field].className += 'form-control'
+    }
+
+
+</body>
+
+	
+
+</html>
+
+
+
+
+
+
+{% endblock connect %}

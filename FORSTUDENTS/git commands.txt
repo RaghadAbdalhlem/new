@@ -1,0 +1,5 @@
+git init ---when creating a new project 
+git add . when we want to add new chanegs
+git commit -m "push message" 
+git remote add origin <project url> --- configuring the project to the git repo 
+git push -f origin master ----- pushing changes to the repo

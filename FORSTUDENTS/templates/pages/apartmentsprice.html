@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+{% extends "masterpage.html" %}
+{% block connect %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/apartment.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/searching.css' %}">
+
+
+<form method='POST'>
+
+	{% csrf_token %}
+<div class="container">
+	<input type="text" placeholder="Search Apartment Price ..." name='searched' >
+	<div class="search"></div>
+  </div>
+  {% if searched %}
+     <h1>Yoy Searched For  Price Of Apartment = {{searched}}</h1>
+</br>
+{%for ap in apart%}
+   {{ap}}</br>
+
+{%endfor%}
+  {%else%}
+  <h1>Heh! Yoy Forget To Search For A Apartment </h1>
+  {% endif %}
+
+
+
+
+
+
+
+
+
+
+{% for ap in apart %}
+<div class="wrapper">
+	<div class="outer">
+		<div class="content animated fadeInLeft">
+			<span class="bg animated fadeInDown">APARTMENTS</span>
+			<h1>FOR STUDENTS</h1>
+
+      <p> Number rooms in apartment is :  {{ap.rooms}}</p>
+   
+      <p> apartmint is in  : {{ap.area}}</p>
+    
+      <p> about the apartment : {{ap.content}}</p>
+   
+      <p> Apartment price is : {{ap.price}} $ </p>
+      <p> Phone Number : {{ap.phonenumber}}</p>
+         <div class="button">
+			<a class="cart-btn" href="#"><i class="cart-icon ion-bag"></i>ADD TO CART</a>
+			</div> 
+	
+		</div>
+		<img src="ap.img" width="70px" class="animated fadeInRight">
+	</div>
+	<p class="footer"></p>
+</div>
+ {% endfor %}
+{% endblock connect%}

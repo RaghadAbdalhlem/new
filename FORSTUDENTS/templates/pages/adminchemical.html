@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+{% extends "masterpage.html" %}
+{% block connect %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admintabels.css' %}">
+
+
+
+<div class="container">
+	<table>
+		<thead>
+            
+			<tr>
+				
+				<th>COURSE NAME</th><p>
+				<th>TEACHER NAME</th>
+				<th>TEACHER PHONE NUMBER</th>
+                
+				<th>CONTENT</th>
+				</br>
+               
+			</tr>
+        </br>
+    </br>
+
+    </thead>
+		<tbody>
+			{% for s in soft %}
+			<tr>
+              
+				<td>{{s.coursename}}</td>
+				<td>{{s.teachername}}</td>
+				<td>{{s.teacherphonenumber}}</td>
+                
+				<td>{{s.content}}</td>
+				<td><a href="{% url 'updatechemical' s.id %}">Update</td>
+			</br>
+				
+                {%endfor%}
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+</html>
+{%endblock connect%}

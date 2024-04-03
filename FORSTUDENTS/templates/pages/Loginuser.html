@@ -1,0 +1,67 @@
+
+{% extends "masterpage.html" %} 
+
+<!DOCTYPE html>
+<html>
+
+{% block connect %}
+{% load static %}
+ <link rel="stylesheet" type="text/css" href="{% static 'css/SignUP.css' %}"> 
+</br>
+</br>
+</br>
+</br>
+<body>
+
+ 
+
+
+	<h1>LOG IN</h1>
+	<form method="post" action="" class="box">
+		{% csrf_token %}
+		<input type="text" color="w"  value="" placeholder="Username" name="username" id="username" />
+	</br>
+</br>
+		<input type="password" value="" placeholder="Password" name="password" id="password" />
+	</br>
+</br>
+		<button   >LOG IN</button>
+	</form>
+
+
+		  {% for message in messages %}
+        <p id="messages">{{ message }}</p>
+
+    {% endfor %}
+
+    <div class="d-flex justify-content-center links">
+        Don't have an account? <a href="{% url 'SignUpUser' %}" class="ml-2">Sign Up</a>
+    </div>
+	
+		
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+
+
+
+		{% comment "" %}<input type="submit" name="LOG IN" href="choose.html"  value="LOG IN">{% endcomment %}  
+	</form>
+</body>
+
+	
+
+</html>
+
+
+
+
+
+
+
+
+{% endblock connect %}

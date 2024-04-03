@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Home Page</title>
+   
+   <style>
+       
+    <body background="static/image/LOGO.jpeg">
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #666;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 1em;
+            margin: 0 0.5em;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>FOR STUDENTS</h1>
+    </header>
+
+    <nav>
+        <a href="aboutus.html">ABOUT US</a>
+    
+        <a href="home.html">LETS START</a>
+        <a href="More.html">MORE</a>
+       
+        
+    </nav>
+
+    <section>
+        <h2>Welcome to our Website!</h2>
+
+        
+    </section>
+    <center>
+        <marquee behavior="scroll" direction="left">
+          
+            <img src = "https://forstudents.org/wp-content/uploads/2022/10/PreviewIMage.jpg" 
+              alt ="logo">
+            
+        </marquee>
+
+    <footer>
+        &copy; 2024 Your Website Name. All rights reserved.
+    </footer>
+
+</body>
+
+
+</html>
+ {% block connect %}
+ {% endblock connect %} 

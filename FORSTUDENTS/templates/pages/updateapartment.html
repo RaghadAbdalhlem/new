@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% extends "masterpage.html" %}
+{% block connect %}
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/admintabels.css' %}">
+
+{% comment %} <form method="POST" action="">
+
+<div class="container">
+	<table>
+		<thead>
+            
+			<tr>
+				
+				<th>AREA</th><p>
+				<th>PRICE</th>
+				<th>ROOMS</th>
+                <th>PHONE NUMBER</th>
+				<th>CONTENT</th>
+				
+
+				</br>
+               
+			</tr>
+        </br>
+    </br>
+
+    </thead>
+		<tbody>
+			{% comment %} {% for s in soft %} {% endcomment %}
+            {% comment %} {% csrf_token %} {% endcomment %}
+			{% comment %} <tr> {% endcomment %}
+				{% comment %} <td>{{s.id}}</td> {% endcomment %}
+
+              {% comment %} <td>  <input type="text" id="area"  name="s.area">{{s.area}}</td> </label> 
+				<td>{{s.price}}</td>
+				<td>{{s.rooms}}</td>
+                <td>{{s.phonenumber}}</td>
+				<td>{{s.content}}</td> {% endcomment %}
+
+				{% comment %} <td><a href="{% url 'updateapartment' s.id %}">Update</td> {% endcomment %}
+
+			{% comment %} </br> {% endcomment %}
+				
+                {% comment %} {%endfor%} {% endcomment %}
+			{% comment %} </tr>
+		
+		</tbody>
+	</table>
+</div>
+
+</html> {% endcomment %} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="container">
+	<table>
+		<thead>
+            
+			<tr>
+				
+				<th>AREA</th><p>
+				<th>PRICE</th>
+				<th>ROOMS</th>
+                <th>PHONE NUMBER</th>
+				<th>CONTENT</th>
+				
+
+				</br>
+               
+			</tr>
+        </br>
+    </br>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.id}}
+   <td> {{ form.area }}</td>
+   <td> {{ form.price }}</td>
+    <td> {{ form.rooms}}</td>
+        <td> {{ form.phonenumber }}</td>
+            <td> {{ form.content }}</td>
+ 
+<div class="form-group col-md-12 mb-3" >
+    <input class="btn login_btn" type="submit"  value="UPDATE">
+    {% comment %} <label for="{{ form.price.label }}">{{ form.price.label }}: </label>
+    {{ form.price }} 
+</div>{#        <p class="dropdown-menu">{{ form.category }}</p>#}
+    {{ form.content }}
+    <input class="btn login_btn" type="submit" value="update Product">
+</form>
+{% for message in messages %}
+    <p id="messages">{{ message }}</p>
+
+{% endfor %}
+
+</div>
+<script>
+var form_fields = document.getElementsByTagName('input')
+form_fields[1].placeholder='productName...';
+form_fields[2].placeholder='BarCode...';
+form_fields[3].placeholder='Price...';
+form_fields[4].placeholder='Amout...';
+form_fields[5].placeholder='description...';
+for (var field in form_fields){
+    form_fields[field].className += 'form-control'
+}
+</script>
+</body> {% endcomment %}
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+</br>
+</br>
+</br>
+
+{%endblock connect%}

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+{% extends "masterpage.html" %}
+{% block connect %}
+{% load static %}
+</br>
+</br>
+</br>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/SignUP.css' %}">
+</br>
+</br>
+</br>
+
+
+
+     <form class="box" action="" method="POST">
+     </br>
+	
+	 <h1>ADD CLASSES </h1>
+
+
+	 {% csrf_token %}
+	 <p style="color: white">COURSE NAME </p>
+	 {{form.coursename}}
+	 <p style="color: white">TEACHER NAME</p>                
+	 {{form.teachername}}
+	 <p style="color: white"> TEACHER PHONE NUMBER</p>
+	 {{form.teacherphonenumber}}
+	 <p style="color: white">CONTENT</p>
+	 {{form.content}}
+
+	 <input type="submit" name="ADD" value="ADD"> 
+    </form>
+      
+
+	 
+    </br>
+</br>
+</br>
+</br>
+	</form>
+</body>
+
+	
+
+</html>
+
+
+
+
+
+
+
+
+{% endblock connect %}

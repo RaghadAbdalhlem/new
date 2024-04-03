@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+{% extends "masterpage.html" %}
+{% block connect %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/showclasses.css' %}">
+
+<div id="container">	
+	{% for s in soft %}
+    <!-- Start	Product details -->
+        <div class="product-details">
+            
+            <!-- 	Product Name -->
+        <h1>MECHANICAL ENGINEERING</h1>
+    <!-- 		<span class="hint new">New</span> -->
+    <!-- 		<span class="hint free-shipping">Free Shipping</span> -->
+    <!-- 		the Product rating -->
+        <span class="hint-star star">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+        </span>
+            
+        
+    <!-- The most important information about the product -->
+            <p class="information">" {{s.content}} "</p>
+    </br>
+    <strong> Cours Name :</strong> {{s.coursname}}
+</br>
+            <strong> Teacher Name :</strong> {{s.teachername}}
+        </br>
+            <strong> Teacher Number :</strong> {{s.teacherphonenumber}}
+
+    
+            
+            
+    <!-- 		Control -->
+    <div class="control">
+        
+    <!-- Start Button buying -->
+        <button class="btn">
+    <!-- 		the Price -->
+         <span class="price">49 $</span>
+    <!-- 		shopping cart icon-->
+       <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+    <!-- 		Buy Now / ADD to Cart-->
+       <span class="buy">Buy Now</span>
+     </button>
+        <!-- End Button buying -->
+        
+    </div>
+                
+    </div>
+        
+    <!-- 	End	Product details   -->
+        
+        
+        
+    <!-- 	Start product image & Information -->
+        
+    <div class="product-image">
+        
+        <img src="  {% static 'image/PrivateClass.jpg' %} ">
+        
+    <!-- 	product Information-->
+    <div class="info">
+        <h2>PRIVATE CLASS</h2>
+        <ul>
+         
+            <li><strong>FOR STUDENTS </strong></li>
+            <li><strong>BEST TEACHERS </strong></li>
+            <li><strong>SUITABLE PRICES</strong></li>
+        </ul>
+    </div>
+    </div>
+    <!--  End product image  -->
+    
+    {%endfor%}
+    </html>
+    </div>
+    {%endblock connect%}
+    
+    
+    

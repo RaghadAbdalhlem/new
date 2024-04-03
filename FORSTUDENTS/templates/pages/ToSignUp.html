@@ -1,0 +1,45 @@
+<html>
+{%extends "masterpage.html" %}
+{% block connect %}
+
+<head>
+  
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ToSignUp.css' %}">
+    
+   <body>
+    
+   
+
+    <form class="box" action"#" method="post">
+         {% csrf_token %} 
+        <h1>SIGNUP</h1>
+    </br>
+    </br>
+
+ {% comment "" %}     <!--   <button style="--clr:#EA00FF"><span>Button</span><i></i></button> -->
+  <!-- <button style="--clr:#FFF01F"><span>Button</span><i></i></button> -->
+  <!-- <button style="--clr:#7FFF00"><span>Button</span><i></i></button> -->
+  <!-- <button style="--clr:#FF5E00"><span>Button</span><i></i></button> -->
+  <a href="{% url 'SignUpAdmin' %}"> 
+  <button style="--clr:#39FF14"   type="button"    ><span>Admin</span><i></i></button>
+  
+  <!-- <button style="--clr:#FF3131"><span>Button</span><i></i></button> -->
+  <!-- <button style="--clr:#1F51FF"><span>Button</span><i></i></button> -->
+  <a href="{% url 'SignUpStudent' %}"> 
+  <button style="--clr:#FF44CC"   type="button"   ><span>Student</span><i></i></button>
+  <!-- <button style="--clr:#BC13FE"><span>Button</span><i></i></button> -->{% endcomment %}   
+  <a href="{% url 'SignUpUser' %}"> 
+  <button style="--clr:#0FF0FC"     type="button"  ><span>SIGNUP</span><i></i></button>
+  <!-- <button style="--clr:#E7EE4F"><span>Button</span><i></i></button> -->
+ 
+      
+
+        <a href="SignUpAdmin.html">
+       
+
+        </style>
+        </head>
+</html>
+
+{% endblock connect %}

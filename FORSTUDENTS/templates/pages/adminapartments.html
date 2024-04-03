@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+{% extends "masterpage.html" %}
+{% block connect %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admintabels.css' %}">
+
+
+
+<div class="container">
+	<table>
+		<thead>
+            
+			<tr>
+				
+				<th>AREA</th><p>
+				<th>PRICE</th>
+				<th>ROOMS</th>
+                <th>PHONE NUMBER</th>
+				<th>CONTENT</th>
+				<th>Update</th>
+
+				</br>
+               
+			</tr>
+        </br>
+    </br>
+
+    </thead>
+		<tbody>
+			{% for s in soft %}
+			<tr>
+				{% comment %} <td>{{s.id}}</td> {% endcomment %}
+
+				<td>{{s.area}}</td>
+				<td>{{s.price}}</td>
+				<td>{{s.rooms}}</td>
+                <td>{{s.phonenumber}}</td>
+				<td>{{s.content}}</td>
+				
+
+				<td><a href="{% url 'updateapartment' s.id %}">Update</td>
+
+			</br>
+				
+                {%endfor%}
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+</html>
+{%endblock connect%}
